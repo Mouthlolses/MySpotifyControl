@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
@@ -25,14 +26,18 @@ import com.example.myspotifycontrol.R
 @Preview
 @Composable
 fun ControlLayout() {
+
+    val shape = RoundedCornerShape(8.dp)
+
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(Color.Black)
+            .padding(16.dp)
             .border(
                 border = BorderStroke(2.dp, Color.Green),
-                shape = RoundedCornerShape(8.dp)
+                shape = shape
             )
+            .background(Color.Gray, shape)
     ) {
         Row(
             modifier = Modifier
