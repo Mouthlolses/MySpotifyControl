@@ -9,8 +9,8 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonColors
@@ -42,38 +42,55 @@ fun ControlLayout() {
         Row(
             modifier = Modifier
                 .fillMaxWidth()
-                .padding(start = 62.dp, end = 62.dp, top = 500.dp),
+                .padding(start = 52.dp, end = 52.dp, top = 500.dp),
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
             Button(
                 onClick = {},
+                shape = shape,
                 colors = ButtonColors(
                     containerColor = Color.Green,
                     contentColor = Color.Black,
                     disabledContentColor = Color.Gray,
                     disabledContainerColor = Color.Gray
                 ),
-                modifier = Modifier
             ) {
                 Image(
                     painter = painterResource(R.drawable.ic_action_previous),
-                    contentDescription = "null"
+                    contentDescription = "previous"
                 )
             }
 
             Button(
                 onClick = {},
+                shape = shape,
                 colors = ButtonColors(
                     containerColor = Color.Green,
                     contentColor = Color.Black,
                     disabledContentColor = Color.Gray,
                     disabledContainerColor = Color.Gray
                 ),
-                modifier = Modifier
+                modifier = Modifier.offset(y = (-60).dp)
+            ) {
+                Image(
+                    painter = painterResource(R.drawable.ic_action_play_pause),
+                    contentDescription = "Play/Pause"
+                )
+            }
+
+            Button(
+                onClick = {},
+                shape = shape,
+                colors = ButtonColors(
+                    containerColor = Color.Green,
+                    contentColor = Color.Black,
+                    disabledContentColor = Color.Gray,
+                    disabledContainerColor = Color.Gray
+                ),
             ) {
                 Image(
                     painter = painterResource(R.drawable.ic_action_skip),
-                    contentDescription = "null"
+                    contentDescription = "next"
                 )
             }
         }
