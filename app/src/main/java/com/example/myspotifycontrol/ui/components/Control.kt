@@ -29,7 +29,6 @@ import com.example.myspotifycontrol.R
 @Preview
 @Composable
 fun ControlLayout() {
-
     val shape = RoundedCornerShape(8.dp)
 
     Column(
